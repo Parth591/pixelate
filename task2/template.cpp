@@ -19,5 +19,9 @@ int main()
     // into a single BGR image, save it as ./assets/memory_restored.png,
     // and print the number of non-zero pixels in the result.
 
+    cv::Mat s1, s2, s3;
+    mat1.convertTo(s1, CV_32S);
+    mat2.convertTo(s2, CV_32S);
+    mat3.convertTo(s3, CV_32S);
     return 0;
 }
