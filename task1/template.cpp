@@ -48,6 +48,7 @@ int main()
     cv::imshow("Output", img_f);
     cv::waitKey(0); // Wait for key press before moving to the next image
 
+    std::cout<< "This approach uses 12 multiplications per pixel."<< endl;
     // TODO: apply K1 and K2 to img_f with as few multiplications per pixel as possible.
     // Print the number of multiplications your approach uses per pixel.
 

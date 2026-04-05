@@ -15,6 +15,8 @@ int main()
         return -1;
     }
 
+
+
     // TODO: reverse the charm on each fragment, merge the recovered channels
     // into a single BGR image, save it as ./assets/memory_restored.png,
     // and print the number of non-zero pixels in the result.
@@ -23,5 +25,10 @@ int main()
     mat1.convertTo(s1, CV_32S);
     mat2.convertTo(s2, CV_32S);
     mat3.convertTo(s3, CV_32S);
+    cv::Mat sum32 = s1 + s2 + s3;
+    cv::Mat masked;
+    cv::bitwise_and(sum32, cv::Scalar(0xFF), masked);
+    cv::Mat result_A;
+    masked.convertTo(result_A, CV_8U);
     return 0;
 }
